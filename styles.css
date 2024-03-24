@@ -1,0 +1,227 @@
+/* Resetowanie marginesów i paddingów dla wszystkich elementów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Wycentrowanie strony w poziomie */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Kontener dla zawartości */
+.container {
+    max-width: 1200px; /* Maksymalna szerokość kontenera */
+    width: 100%; /* Szerokość kontenera zajmuje całą dostępną przestrzeń */
+    padding: 20px; /* Dopełnienie kontenera */
+}
+
+/* Stylizacja nagłówka */
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f8f9fa;
+}
+
+/* Stylizacja logo */
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Stylizacja menu głównego */
+.top-menu nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-menu nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.top-menu nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Stylizacja podmenu */
+.top-menu nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.top-menu nav ul li:hover ul {
+    display: block;
+}
+
+.top-menu nav ul li ul li {
+    display: block;
+}
+
+.top-menu nav ul li ul li a {
+    display: block;
+    padding: 5px 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.top-menu nav ul li ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Stylizacja stopki */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f8f9fa;
+}
+
+/* Podstawowe style dla tabeli */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Stylowanie nagłówków kolumn */
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Stylowanie wierszy */
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Stylowanie komórek z ikoną edycji */
+table tbody tr td:last-child {
+    text-align: center;
+}
+
+/* --------------------- */
+
+.error {
+ color: #FF0000; 
+ padding:5px;
+ border: 1px dotted #F00;
+ background-color: #FFFF00;
+}
+
+.blocked { background-color: #FF7375; }
+.member { background-color: #ccffcc; }
+.moderator { background-color: #ffff99; }
+.super-moderator { background-color: #ffcccc; }
+.administrator { background-color: #99ccff; }
+
+.chat-button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chat-button {
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.chat-button:hover {
+    background-color: #0056b3;
+}
+
+.chat-counter {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+ /* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 70%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+} 
+
+ .accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+
+.remove-icon {
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+}
